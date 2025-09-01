@@ -1,0 +1,58 @@
+import turtle
+
+s = turtle.getscreen()
+t = turtle.Turtle()
+
+#make half circle
+
+t.width(15)
+t.speed(5)
+
+t.penup()
+t.goto(-150, 0)
+t.pendown()
+t.color("cyan")
+t.circle(110)
+
+t.penup()
+t.goto(110, 0)
+t.pendown()
+t.color("black")
+t.circle(110)
+
+t.penup()
+t.goto(350, 0)
+t.pendown()
+t.color("red")
+t.circle(110)
+
+#yellow circle
+t.penup()
+t.goto(-130, -45)
+t.pendown()
+t.color("yellow")
+t.setheading(275)
+t.circle(110, 180)
+t.color('purple')
+t.circle(110, 45)
+t.color('pink')
+t.circle(110, 45)
+t.color('blue')
+t.circle(110, 45)
+t.color('brown')
+t.circle(110, 45)
+t.color('gray')
+
+#green circle
+t.penup()
+t.goto(125, -45)
+t.pendown()
+t.color("green")
+t.setheading(275)
+t.circle(110, 180)
+t.circle(110, 45)
+t.circle(110, 45)
+t.circle(110, 45)
+t.circle(110, 45)
+
+turtle.done()
