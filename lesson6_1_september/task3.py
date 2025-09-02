@@ -81,4 +81,4 @@ t.color("red") # Sätter färgen till
 t.setheading(90) #Bestämmer sköldpaddans position, i detta fall till 90 
 t.circle(110, -180) #Sätter radien på cirkeln till 110 och antal grader den ska ritas till 180 grader (en halvcirkel)
 
-turtle.done()
+turtle.done() # Så att programmet ej stängs
