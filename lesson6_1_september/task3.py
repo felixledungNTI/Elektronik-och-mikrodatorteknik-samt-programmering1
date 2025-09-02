@@ -3,48 +3,82 @@ import turtle
 s = turtle.getscreen()
 t = turtle.Turtle()
 
-#make half circle
+t.width(15)
+t.speed(5)
+
+# --- Nedre halvorna ---
+
+t.penup() #Förflyttar pennan så att sköldpaddan kan förflytta sig
+t.goto(370, 5) #Förflyttar sköldpaddans till en viss position (x, y) i detta fall x = 370 och y = 5
+t.pendown() #Sätter ner pennan där sköldpaddan har förflyttas till
+t.color("red") # Sätter färgen till
+t.setheading(90) #Bestämmer sköldpaddans position, i detta fall till 90 
+t.circle(110, 180) 
+
+t.penup() #Förflyttar pennan så att sköldpaddan kan förflytta sig
+t.goto(240, -85) #Förflyttar sköldpaddans till en viss position (x, y) i detta fall x = 240 och y = -85
+t.pendown() #Sätter ner pennan där sköldpaddan har förflyttas till
+t.color("green") # Sätter färgen till
+t.setheading(90) #Bestämmer sköldpaddans position, i detta fall till 90 
+t.circle(110, 180) 
+
+t.penup() #Förflyttar pennan så att sköldpaddan kan förflytta sig
+t.goto(110, 5) #Förflyttar sköldpaddans till en viss position (x, y) i detta fall x = 110 och y = 5
+t.pendown() #Sätter ner pennan där sköldpaddan har förflyttas till
+t.color("black") # Sätter färgen till
+t.setheading(90) #Bestämmer sköldpaddans position, i detta fall till 90 
+t.circle(110, 180) 
+
+t.penup() #Förflyttar pennan så att sköldpaddan kan förflytta sig
+t.goto(-20, -85) #Förflyttar sköldpaddans till en viss position (x, y) i detta fall x = -20 och y = -85
+t.pendown() #Sätter ner pennan där sköldpaddan har förflyttas till
+t.color("yellow") # Sätter färgen till
+t.setheading(90) #Bestämmer sköldpaddans position, i detta fall till 90 
+t.circle(110, 180) 
+
+t.penup() #Förflyttar pennan så att sköldpaddan kan förflytta sig
+t.goto(-150, 5) #Förflyttar sköldpaddans till en viss position (x, y) i detta fall x = -150 och y = 5
+t.pendown() #Sätter ner pennan där sköldpaddan har förflyttas till
+t.color("cyan") # Sätter färgen till
+t.setheading(90) #Bestämmer sköldpaddans position, i detta fall till 90 
+t.circle(110, 180) 
 
 
+# --- Övre halvorna ---
 
-t.penup() 
-t.goto(-150,0)
-t.pendown()
-t.color("cyan")
-t.setheading(90)
-t.width(10)
-t.circle(100, 180)
+t.penup() #Förflyttar pennan så att sköldpaddan kan förflytta sig
+t.goto(-150, 5) #Förflyttar sköldpaddans till en viss position (x, y) i detta fall x = -150 och y = 5
+t.pendown() #Sätter ner pennan där sköldpaddan har förflyttas till
+t.color("cyan") # Sätter färgen till
+t.setheading(90) #Bestämmer sköldpaddans position, i detta fall till 90 
+t.circle(110, -180) #Sätter radien på cirkeln till 110 och antal grader den ska ritas till 180 grader (en halvcirkel) 
 
-t.penup()
-t.goto(100,0)
-t.pendown()
-t.color("black")
-t.setheading(90)
-t.width(10)
-t.circle(100, 180)
+t.penup() #Förflyttar pennan så att sköldpaddan kan förflytta sig
+t.goto(-20, -85) #Förflyttar sköldpaddans till en viss position (x, y) i detta fall x = -20 och y = -85
+t.pendown() #Sätter ner pennan där sköldpaddan har förflyttas till
+t.color("yellow") # Sätter färgen till
+t.setheading(90) #Bestämmer sköldpaddans position, i detta fall till 90 
+t.circle(110, -180) #Sätter radien på cirkeln till 110 och antal grader den ska ritas till 180 grader (en halvcirkel) 
 
-t.penup()
-t.goto(350,0)
-t.pendown()
-t.color("red")
-t.setheading(90)
-t.width(10)
-t.circle(100,180)
+t.penup() #Förflyttar pennan så att sköldpaddan kan förflytta sig
+t.goto(110, 5) #Förflyttar sköldpaddans till en viss position (x, y) i detta fall x = 110 och y = 5
+t.pendown() #Sätter ner pennan där sköldpaddan har förflyttas till
+t.color("black") # Sätter färgen till
+t.setheading(90) #Bestämmer sköldpaddans position, i detta fall till 90 
+t.circle(110, -180) #Sätter radien på cirkeln till 110 och antal grader den ska ritas till 180 grader (en halvcirkel) 
 
-t.penup()
-t.goto(-25, -115)
-t.pendown()
-t.color("yellow")
-t.setheading(270)
-t.width(10)
-t.circle(100,180)
+t.penup() #Förflyttar pennan så att sköldpaddan kan förflytta sig
+t.goto(240, -85) #Förflyttar sköldpaddans till en viss position (x, y) i detta fall x = 240 och y = -85
+t.pendown() #Sätter ner pennan där sköldpaddan har förflyttas till
+t.color("green") # Sätter färgen till
+t.setheading(90) #Bestämmer sköldpaddans position, i detta fall till 90 
+t.circle(110, -180) #Sätter radien på cirkeln till 110 och antal grader den ska ritas till 180 grader (en halvcirkel) 
 
-t.penup()
-t.goto(-225, -115)
-t.pendown()
-t.color("green")
-t.setheading(270)
-t.width(10)
-t.circle(100,180)
+t.penup() #Förflyttar pennan så att sköldpaddan kan förflytta sig
+t.goto(370, 5) #Förflyttar sköldpaddans till en viss position (x, y) i detta fall x = 370 och y = 5
+t.pendown() #Sätter ner pennan där sköldpaddan har förflyttas till
+t.color("red") # Sätter färgen till
+t.setheading(90) #Bestämmer sköldpaddans position, i detta fall till 90 
+t.circle(110, -180) #Sätter radien på cirkeln till 110 och antal grader den ska ritas till 180 grader (en halvcirkel)
 
 turtle.done()
