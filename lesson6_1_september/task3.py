@@ -6,8 +6,6 @@ t = turtle.Turtle()
 t.width(15)
 t.speed(5)
 
-# --- Nedre halvorna ---
-
 t.penup() #Förflyttar pennan så att sköldpaddan kan förflytta sig
 t.goto(370, 5) #Förflyttar sköldpaddans till en viss position (x, y) i detta fall x = 370 och y = 5
 t.pendown() #Sätter ner pennan där sköldpaddan har förflyttas till
@@ -42,9 +40,6 @@ t.pendown() #Sätter ner pennan där sköldpaddan har förflyttas till
 t.color("cyan") # Sätter färgen till cyan
 t.setheading(90) #Bestämmer sköldpaddans position, i detta fall till 90 
 t.circle(110, 180) 
-
-
-# --- Övre halvorna ---
 
 t.penup() #Förflyttar pennan så att sköldpaddan kan förflytta sig
 t.goto(-150, 5) #Förflyttar sköldpaddans till en viss position (x, y) i detta fall x = -150 och y = 5
