@@ -24,20 +24,17 @@ y = 0
 
 t.setheading(90)
 
-for c in range(4):
-    
-
 vimpel(0,0,90, 'blue')
-vimpel(0,45,90,'blue')
-vimpel(0,90,90,'blue')
-vimpel(0,135,90,'blue')
-vimpel(75,0,90, 'red')
-vimpel(75,45,90, 'red')
-vimpel(75,90,90, 'red')
-vimpel(75,135,90, 'red')
-vimpel(150,0,90, 'green')
-vimpel(150,45,90,'green')
-vimpel(150,90,90,'green')
-vimpel(150,135,90,'green')
+vimpel(10,65,90,'blue')
+vimpel(20,110,90,'blue')
+vimpel(30,155,90,'blue')
+vimpel(100,0,90, 'red')
+vimpel(110,65,90, 'red')
+vimpel(120,110,90, 'red')
+vimpel(130,155,90, 'red')
+vimpel(175,0,90, 'green')
+vimpel(185,65,90,'green')
+vimpel(195,110,90,'green')
+vimpel(205,155,90,'green')
 
 turtle.done()
