@@ -25,6 +25,5 @@ t.setheading(90)
 vimpel(0,0,0)
 vimpel(-50, 25, 25)
 vimpel(-100,50, 95)
-vimpel(-150,75, 165)
 
 turtle.done()

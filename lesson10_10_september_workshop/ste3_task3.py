@@ -13,12 +13,32 @@ radius2 = 95
 radius3 = 40
 radiusVerySmall = 5
 
+turtle.bgcolor('lightblue')
+
+
+def grass():
+    screenWidth = s.window_width()
+    screenHeight = s.window_height()
+
+    t.penup()
+    t.goto(-screenWidth // 2, -screenHeight // 2)
+    t.pendown()
+    t.color('green')
+    t.begin_fill()
+
+    for c in range(2):
+        t.forward(screenWidth)
+        t.left(90)
+        t.forward(screenHeight // 4)
+        t.left(90)
+    t.end_fill()
+
 
 def treeTrunk(treeX):
     t.fillcolor('brown')
     t.color('brown')
     t.penup()
-    t.goto(treeX - 22.5, -50)
+    t.goto(treeX - 22.5, -s.window_height()//4)
     t.pendown()
     t.begin_fill()
     t.setheading(0)
@@ -41,7 +61,9 @@ def treeRight(treeX=450):
     width = math.cos(math.radians(50)) * 100
 
     for c in range(5):
-        y = c * (height / 2)
+        trunkTop = -s.window_height()//4+50
+        y = trunkTop+c*(height/2)
+        
         t.penup()
         t.goto(treeX - 100 * math.cos(math.radians(40)), y)
         t.pendown()
@@ -63,17 +85,20 @@ def treeLeft(treeX=-450):
     width = math.cos(math.radians(50)) * 100
 
     for c in range(5):
-        y = c * (height / 2)
+        trunkTop = -s.window_height()//4+50
+        y = trunkTop+c*(height/2)
+        
         t.penup()
-        t.goto(treeX + 100 * math.cos(math.radians(40)), y)  # spegelvänt
+        t.goto(treeX + 100 * math.cos(math.radians(40)), y)
         t.pendown()
         t.begin_fill()
-        t.setheading(140)  # spegelvänt
+        t.setheading(140)
         t.forward(100)
-        t.setheading(220)  # spegelvänt
+        t.setheading(220)
         t.forward(100)
         t.goto(treeX, y)
         t.end_fill()
+
 
 def tree(treeX):
     treeTrunk(treeX)
@@ -102,11 +127,29 @@ def tree(treeX):
 
         t.end_fill()
 
+def scarf():
+    scarfY = -75+radius2*2
+    
+    t.setheading(-450)
+    t.pencolor('red')
+    t.pensize(10)
+    t.penup()
+    t.goto(-20,scarfY)
+    t.pendown()
+    t.circle(25, 180)
+    t.hideturtle()
+    
+    t.setheading(270)
+    t.pencolor('red')
+    t.penup()
+    t.goto(30,scarfY)
+    t.pendown()
+    t.forward(100)
 
 def snowman():
-    # kropp
+    # body
     t.penup()
-    t.pencolor('black')
+    t.pencolor('white')
     t.fillcolor('white')
     t.goto(0, -350)
     t.pendown()
@@ -128,7 +171,7 @@ def snowman():
     t.circle(radius3)
     t.end_fill()
 
-    # hatt
+    # hat
     t.setheading(180)
     t.penup()
     t.pencolor('#2e2e2e')
@@ -153,14 +196,21 @@ def snowman():
     t.forward(25)
     t.end_fill()
 
-    # mun
-    t.setheading(180)
-    t.penup()
-    t.goto(15, 130)
-    t.pendown()
-    t.forward(25)
+    scarf()
 
-    # ögon
+    # mouth
+    t.penup()
+    t.pencolor('black')
+    t.goto(0, 130)
+    t.pendown()
+    t.fillcolor('black')
+    t.begin_fill()
+    t.circle(5)
+    t.end_fill()
+
+    # eyes
+    
+    #vänsta ögat
     t.penup()
     t.goto(-20, 155)
     t.pendown()
@@ -169,63 +219,103 @@ def snowman():
     t.circle(5)
     t.end_fill()
 
+    #högra ögat
     t.penup()
-    t.goto(30, 155)
+    t.goto(15, 155)
     t.pendown()
     t.begin_fill()
     t.circle(5)
     t.end_fill()
 
     # arm1
-    t.setheading(25)
+    t.pencolor('brown')
+    t.pensize(5)
+    t.setheading(0)
     t.penup()
-    t.goto(95, 0)
+    t.goto(95, 30)
     t.pendown()
     t.forward(45)
 
-    t.setheading(65)
+    t.setheading(35)
     t.penup()
-    t.goto(135, 20)
-    t.pendown()
-    t.forward(10)
-
-    t.setheading(-65)
-    t.penup()
-    t.goto(135, 20)
-    t.pendown()
-    t.forward(10)
-
-    # arm2
-    t.setheading(155)
-    t.penup()
-    t.goto(-95, 0)
-    t.pendown()
-    t.forward(45)
-
-    t.setheading(115)
-    t.penup()
-    t.goto(-135, 20)
+    t.goto(138, 30)
     t.pendown()
     t.forward(25)
 
-    t.setheading(125)
+    # arm2
+    t.setheading(-140)
     t.penup()
-    t.goto(-146, 40)
+    t.goto(-95, 30)
     t.pendown()
-    t.forward(15)
+    t.forward(45)
 
-    t.setheading(-125)
+    t.setheading(-105)
     t.penup()
-    t.goto(-138, 56)
+    t.goto(-130, 0)
     t.pendown()
-    t.forward(15)
+    t.forward(25)
 
     t.hideturtle()
 
+    t.penup()
 
+    t.pencolor('green')
+    t.begin_fill()
+    t.goto(0, 75)
+    t.pendown()
+    t.circle(radiusVerySmall)
+    t.color('green')
+    t.end_fill()
+    
+    t.penup()
+    t.begin_fill()
+    t.goto(0, 50)
+    t.pendown()
+    t.circle(radiusVerySmall)
+    t.color('green')
+    t.end_fill()
+    
+    t.penup()
+    t.begin_fill()
+    t.goto(0, 25)
+    t.pendown()
+    t.circle(radiusVerySmall)
+    t.color('green')
+    t.end_fill()
+    
+    t.penup()
+    t.begin_fill()
+    t.goto(0, 0)
+    t.pendown()
+    t.circle(radiusVerySmall)
+    t.color('green')
+    t.end_fill()
+
+def sun():
+
+    t.pencolor('orange')
+    t.pensize(5)
+    t.penup()
+    t.goto(-800, 500)
+    t.pendown()
+    t.fillcolor('yellow')
+    t.begin_fill()
+    t.circle(100)
+    t.end_fill()
+
+
+grass()
 snowman()
-treeRight(450)
-treeLeft(-450)
+
+treeRight(300)
+treeRight(600)
+treeRight(750)
+
+treeLeft(-300)
+treeLeft(-600)
+treeLeft(-750)
+
+sun()
 
 t.hideturtle()
 
