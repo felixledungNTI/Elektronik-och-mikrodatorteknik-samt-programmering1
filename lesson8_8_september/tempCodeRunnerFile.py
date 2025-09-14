@@ -1,1 +1,0 @@
-t.xcor(), t.ycor()
