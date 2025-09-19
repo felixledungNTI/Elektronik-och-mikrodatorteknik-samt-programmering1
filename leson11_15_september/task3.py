@@ -54,7 +54,7 @@ while True:
     
     # square
     square.clear()
-    square.sety(square.ycor()-2)
+    square.goto(square.xcor()+1,square.ycor()-2)
     drawingSquare(square,100)
     
     s.update()
