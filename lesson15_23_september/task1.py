@@ -42,9 +42,11 @@ def currentTime():
     
     return hour, minutes, second
 
+hour, minutes, second = currentTime()
+
 #Display current time
 
-turtle.write(currentTime(), align='center', font=('Courier',24,'normal'))
+turtle.write(f'{hour}:{minutes}:{second}', align='center', font=('Courier', 24, 'normal'))
 
 while True:
     timeViewer(clockViewer, 10)
