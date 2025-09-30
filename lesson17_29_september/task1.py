@@ -37,7 +37,7 @@ def road():
     t.pendown()
     t.color('gray')
     t.begin_fill()
-      
+    
     for c in range(2):
         t.forward(roadWidth)
         t.left(90)
@@ -172,18 +172,24 @@ def chimeny():
         t.left(90)
     t.end_fill()
     
-def cloud():
-    t.penup()
-    t.goto(-200,200)
-    t.pendown()
+def cloud(x=-200,y=200):
     t.color('white')
-    t.begin_fill()
     
-    for p in range(2):
-        t.circle(50,90)
-        t.circle(25,90)
-    t.end_fill()
-    
+    for o in range(3):
+        t.penup()
+        t.goto(x+o*40,y)
+        t.pendown()
+        t.begin_fill()
+        t.circle(30)
+        t.end_fill()
+        
+    for j in range(2):
+        t.penup()
+        t.goto(x+20+j*40,y+30)
+        t.pendown()
+        t.begin_fill()
+        t.circle(25)
+        t.end_fill()
 
 grass()
 road()
@@ -194,6 +200,8 @@ sun(50)
 door()
 ceiling()
 chimeny()
-cloud()
+cloud(-200,200)
+cloud(-400,100)
+cloud(200,100)
 
 turtle.done()
