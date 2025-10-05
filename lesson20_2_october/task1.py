@@ -1,4 +1,7 @@
 import turtle
+import os
+
+os.chdir(os.path.dirname(__file__))
 
 s = turtle.Screen()
 t = turtle.Turtle()
