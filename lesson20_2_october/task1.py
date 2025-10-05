@@ -1,7 +1,7 @@
 import turtle
 import os
 
-os.chdir(os.path.dirname(__file__))
+os.chdir(os.path.dirname(__file__)) # Hittar bilden och flyttar den till den mapp som kodfilen ligger i
 
 s = turtle.Screen()
 t = turtle.Turtle()
