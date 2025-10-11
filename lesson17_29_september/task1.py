@@ -5,7 +5,6 @@ t = turtle.Turtle()
 
 s.bgcolor('#21a1fc')
 t.speed(0)
-t.hideturtle()
 
 screenWidth = s.window_width()
 screenHeight = s.window_height()
@@ -87,7 +86,35 @@ def window(xOffset):
         t.forward(windowHeight)
         t.left(90)
     t.end_fill()
-
+    
+    #border
+    t.penup()
+    t.goto(x,y)
+    t.pendown()
+    t.color('black')
+    
+    for c in range(2):
+        t.forward(windowWidth)
+        t.left(90)
+        t.forward(windowHeight)
+        t.left(90)
+        
+    #horizontal line
+    t.penup()
+    t.goto(x,y+windowHeight//2)
+    t.pendown()
+    t.color('black')
+    t.forward(windowWidth)
+    
+    # vertical line
+    t.penup()
+    t.goto(x+windowHeight//2,y)
+    t.pendown()
+    t.color('black')
+    t.left(90)
+    t.forward(windowHeight)
+    t.right(90)
+        
 def sun(radius):
     t.penup()
     t.goto(-screenWidth//2+100,screenHeight//2-120)
@@ -200,8 +227,8 @@ sun(50)
 door()
 ceiling()
 chimeny()
-cloud(-200,200)
-cloud(-400,100)
-cloud(200,100)
+cloud(200,200)
+
+t.hideturtle()
 
 turtle.done()

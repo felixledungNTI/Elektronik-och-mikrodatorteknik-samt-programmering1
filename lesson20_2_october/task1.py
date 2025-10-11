@@ -9,6 +9,7 @@ t = turtle.Turtle()
 s.addshape('cartoonMushroom.gif')
 t.shape('cartoonMushroom.gif')
 t.penup()
+s.bgcolor('lightblue')
 
 t.goto(0,0)
 
